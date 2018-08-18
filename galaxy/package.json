@@ -1,0 +1,56 @@
+{
+  "name": "lohoLiveWebClient",
+  "version": "1.0.0",
+  "description": "loho live webclient",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "local-dev": "webpack-dev-server --progress --colors --inline --port 8080 --host 192.168.1.109 --content-base .",
+    "dev": "webpack-dev-server --progress --colors",
+    "prod": "npm run clean && NODE_EVN=production webpack -p",
+    "clean": "rimraf ./dist/*"
+  },
+  "author": {
+    "name": "pampa/niexiaoguang",
+    "email": "nxg@lohosoft.com",
+    "url": "http://lohosoft.com"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "global": "^4.3.0",
+    "glsl-checker": "^1.0.1",
+    "glsl-noise": "0.0.0",
+    "glslify": "^5.0.0",
+    "glslify-hex": "^2.0.1",
+    "glslify-fancy-imports": "^1.0.1",
+    "three-orbit-viewer": "^69.3.0",
+    "three-vignette-background": "^1.0.2",
+    "transform-loader": "^0.2.3",
+    "dgram": "^1.0.1"
+  },
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-env": "^1.6.0",
+    "babelify": "^7.3.0",
+    "html-webpack-plugin": "^2.29.0",
+    "ify-loader": "mattdesl/ify-loader#fix-errors",
+    "p5": "^0.5.11",
+    "three": "^0.86.0",
+    "webpack": "^3.4.1",
+    "webpack-dev-server": "^2.6.1",
+    "ws": "^3.1.0"
+  },
+  "browserify": {
+    "transform": [
+      "glslify"
+    ]
+  },
+  "glslify": {
+    "transform": [
+      "glslify-fancy-imports",
+      "glslify-hex"
+    ]
+  }
+}
