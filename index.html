@@ -1,12 +1,37 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>聂晓光/Pampa</title>
+    <style type="text/css">
+    html {
+    	background: black;
+    }
+    .Aligner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Aligner-item {
+        max-width: 50%;
+    }
+
+    .Aligner-item--top {
+        align-self: flex-start;
+    }
+
+    .Aligner-item--bottom {
+        align-self: flex-end;
+    }
+    </style>
 </head>
 
 <body>
-    <video id="liveVideo" x5-video-player-type='h5' x5-video-player-fullscreen='true' src="./pics/video.mp4">
+	<div class="Aligner">
+  <div class="Aligner-item Aligner-item--top">…</div>
+  <div class="Aligner-item"><img src="pics/paperplane.jpg"></div>
+  <div class="Aligner-item Aligner-item--bottom">…</div>
+</div>
 </body>
 
 </html>
